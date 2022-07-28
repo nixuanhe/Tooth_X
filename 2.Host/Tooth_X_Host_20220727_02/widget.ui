@@ -35,13 +35,13 @@
     <attribute name="title">
      <string> 温度</string>
     </attribute>
-    <widget class="QCustomPlot" name="plotTemperature" native="true">
+    <widget class="QCustomPlot" name="plotTemperatureWidget" native="true">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>19</y>
        <width>490</width>
-       <height>410</height>
+       <height>411</height>
       </rect>
      </property>
     </widget>
@@ -49,28 +49,53 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>460</y>
+       <y>439</y>
        <width>491</width>
-       <height>71</height>
+       <height>101</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_6">
         <item>
-         <widget class="QLabel" name="label">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>  当前温度：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="currTempLCDNum"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QLabel" name="tempFrameRate">
           <property name="text">
-           <string>  当前温度：</string>
+           <string>     帧率：</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLCDNumber" name="lcdNumber"/>
+         <widget class="QLabel" name="tempFrameRateDisplay">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="open_close_drawTemp">
           <property name="text">
-           <string> STOP</string>
+           <string>  显示曲线</string>
           </property>
          </widget>
         </item>
@@ -272,7 +297,7 @@
       <x>10</x>
       <y>30</y>
       <width>181</width>
-      <height>91</height>
+      <height>98</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -287,6 +312,13 @@
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>擦除</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>停止</string>
        </property>
       </widget>
      </item>

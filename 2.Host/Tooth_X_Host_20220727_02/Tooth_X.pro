@@ -20,12 +20,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     qcustomplot.cpp \
-    usart.cpp \
     widget.cpp
 
 HEADERS += \
     qcustomplot.h \
-    usart.h \
     widget.h
 
 FORMS += \
